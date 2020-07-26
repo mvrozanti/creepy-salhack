@@ -71,6 +71,8 @@ public class AutoBuilderModule extends Module
         Wall,
         HighwayWall,
         Stair,
+        Penis,
+        NomadHut
     }
     
     public enum BuildingModes
@@ -846,7 +848,275 @@ public class AutoBuilderModule extends Module
                 break;
             default:
                 break;
-            
+            case Penis:
+                switch (PlayerUtil.GetFacing())
+                {
+                    case East:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).east().east();
+                        BlockArray.add(interpPos);
+                        BlockArray.add(interpPos.north());
+                        BlockArray.add(interpPos.up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.south());
+                        break;
+                    case North:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).north().north();
+                        BlockArray.add(interpPos);
+                        BlockArray.add(interpPos.west());
+                        BlockArray.add(interpPos.up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.east());
+                        break;
+                    case South:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).south().south();
+                        BlockArray.add(interpPos);
+                        BlockArray.add(interpPos.east());
+                        BlockArray.add(interpPos.up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.west());
+                        break;
+                    case West:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).west().west();
+                        BlockArray.add(interpPos);
+                        BlockArray.add(interpPos.south());
+                        BlockArray.add(interpPos.up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.north());
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case NomadHut:
+                switch (PlayerUtil.GetFacing())
+                {
+                    case East:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).east().east();
+                        BlockArray.add(interpPos.north());
+                        BlockArray.add(interpPos.north().north());
+                        BlockArray.add(interpPos.north().up());
+                        BlockArray.add(interpPos.north().up().up());
+                        BlockArray.add(interpPos.north().north().up());
+                        BlockArray.add(interpPos.north().north().up().up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
+                        BlockArray.add(interpPos.south());
+                        BlockArray.add(interpPos.south().south());
+                        BlockArray.add(interpPos.south().up());
+                        BlockArray.add(interpPos.south().south().up());
+                        BlockArray.add(interpPos.south().up().up());
+                        BlockArray.add(interpPos.south().south().up().up());
+                        BlockArray.add(interpPos.north().north().east());
+                        BlockArray.add(interpPos.north().north().east().east());
+                        BlockArray.add(interpPos.north().north().east().east().east());
+                        BlockArray.add(interpPos.north().north().east().east().east().east());
+                        BlockArray.add(interpPos.north().north().up().east());
+                        BlockArray.add(interpPos.north().north().up().east().east().east());
+                        BlockArray.add(interpPos.north().north().up().east().east().east().east());
+                        BlockArray.add(interpPos.north().north().up().up().east());
+                        BlockArray.add(interpPos.north().north().up().up().east().east());
+                        BlockArray.add(interpPos.north().north().up().up().east().east().east());
+                        BlockArray.add(interpPos.north().north().up().up().east().east().east().east());
+                        BlockArray.add(interpPos.north().east().east().east().east());
+                        BlockArray.add(interpPos.north().up().east().east().east().east());
+                        BlockArray.add(interpPos.north().up().up().east().east().east().east());
+                        BlockArray.add(interpPos.east().east().east().east());
+                        BlockArray.add(interpPos.up().up().east().east().east().east());
+                        BlockArray.add(interpPos.south().east().east().east().east());
+                        BlockArray.add(interpPos.south().south().east().east().east().east());
+                        BlockArray.add(interpPos.south().up().east().east().east().east());
+                        BlockArray.add(interpPos.south().up().up().east().east().east().east());
+                        BlockArray.add(interpPos.south().south().up().east().east().east().east());
+                        BlockArray.add(interpPos.south().south().up().up().east().east().east().east());
+                        BlockArray.add(interpPos.south().south().east());
+                        BlockArray.add(interpPos.south().south().east().east());
+                        BlockArray.add(interpPos.south().south().east().east().east());
+                        BlockArray.add(interpPos.south().south().up().east());
+                        BlockArray.add(interpPos.south().south().up().east().east().east());
+                        BlockArray.add(interpPos.south().south().up().up().east());
+                        BlockArray.add(interpPos.south().south().up().up().east().east());
+                        BlockArray.add(interpPos.south().south().up().up().east().east().east());
+                        BlockArray.add(interpPos.up().up().up().east());
+                        BlockArray.add(interpPos.up().up().up().east().east());
+                        BlockArray.add(interpPos.up().up().up().east().east().east());
+                        BlockArray.add(interpPos.up().up().up().north().east());
+                        BlockArray.add(interpPos.up().up().up().north().east().east());
+                        BlockArray.add(interpPos.up().up().up().north().east().east().east());
+                        BlockArray.add(interpPos.up().up().up().south().east());
+                        BlockArray.add(interpPos.up().up().up().south().east().east());
+                        BlockArray.add(interpPos.up().up().up().south().east().east().east());
+                        break;
+                    case North:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).north().north();
+                        BlockArray.add(interpPos.west());
+                        BlockArray.add(interpPos.west().west());
+                        BlockArray.add(interpPos.west().up());
+                        BlockArray.add(interpPos.west().up().up());
+                        BlockArray.add(interpPos.west().west().up());
+                        BlockArray.add(interpPos.west().west().up().up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
+                        BlockArray.add(interpPos.east());
+                        BlockArray.add(interpPos.east().east());
+                        BlockArray.add(interpPos.east().up());
+                        BlockArray.add(interpPos.east().east().up());
+                        BlockArray.add(interpPos.east().up().up());
+                        BlockArray.add(interpPos.east().east().up().up());
+                        BlockArray.add(interpPos.west().west().north());
+                        BlockArray.add(interpPos.west().west().north().north());
+                        BlockArray.add(interpPos.west().west().north().north().north());
+                        BlockArray.add(interpPos.west().west().north().north().north().north());
+                        BlockArray.add(interpPos.west().west().up().north());
+                        BlockArray.add(interpPos.west().west().up().north().north().north());
+                        BlockArray.add(interpPos.west().west().up().north().north().north().north());
+                        BlockArray.add(interpPos.west().west().up().up().north());
+                        BlockArray.add(interpPos.west().west().up().up().north().north());
+                        BlockArray.add(interpPos.west().west().up().up().north().north().north());
+                        BlockArray.add(interpPos.west().west().up().up().north().north().north().north());
+                        BlockArray.add(interpPos.west().north().north().north().north());
+                        BlockArray.add(interpPos.west().up().north().north().north().north());
+                        BlockArray.add(interpPos.west().up().up().north().north().north().north());
+                        BlockArray.add(interpPos.north().north().north().north());
+                        BlockArray.add(interpPos.up().up().north().north().north().north());
+                        BlockArray.add(interpPos.east().north().north().north().north());
+                        BlockArray.add(interpPos.east().east().north().north().north().north());
+                        BlockArray.add(interpPos.east().up().north().north().north().north());
+                        BlockArray.add(interpPos.east().up().up().north().north().north().north());
+                        BlockArray.add(interpPos.east().east().up().north().north().north().north());
+                        BlockArray.add(interpPos.east().east().up().up().north().north().north().north());
+                        BlockArray.add(interpPos.east().east().north());
+                        BlockArray.add(interpPos.east().east().north().north());
+                        BlockArray.add(interpPos.east().east().north().north().north());
+                        BlockArray.add(interpPos.east().east().up().north());
+                        BlockArray.add(interpPos.east().east().up().north().north().north());
+                        BlockArray.add(interpPos.east().east().up().up().north());
+                        BlockArray.add(interpPos.east().east().up().up().north().north());
+                        BlockArray.add(interpPos.east().east().up().up().north().north().north());
+                        BlockArray.add(interpPos.up().up().up().north());
+                        BlockArray.add(interpPos.up().up().up().north().north());
+                        BlockArray.add(interpPos.up().up().up().north().north().north());
+                        BlockArray.add(interpPos.up().up().up().west().north());
+                        BlockArray.add(interpPos.up().up().up().west().north().north());
+                        BlockArray.add(interpPos.up().up().up().west().north().north().north());
+                        BlockArray.add(interpPos.up().up().up().east().north());
+                        BlockArray.add(interpPos.up().up().up().east().north().north());
+                        BlockArray.add(interpPos.up().up().up().east().north().north().north());
+                        break;
+                    case South:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).south().south();
+                        BlockArray.add(interpPos.east());
+                        BlockArray.add(interpPos.east().east());
+                        BlockArray.add(interpPos.east().up());
+                        BlockArray.add(interpPos.east().up().up());
+                        BlockArray.add(interpPos.east().east().up());
+                        BlockArray.add(interpPos.east().east().up().up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
+                        BlockArray.add(interpPos.west());
+                        BlockArray.add(interpPos.west().west());
+                        BlockArray.add(interpPos.west().up());
+                        BlockArray.add(interpPos.west().west().up());
+                        BlockArray.add(interpPos.west().up().up());
+                        BlockArray.add(interpPos.west().west().up().up());
+                        BlockArray.add(interpPos.east().east().south());
+                        BlockArray.add(interpPos.east().east().south().south());
+                        BlockArray.add(interpPos.east().east().south().south().south());
+                        BlockArray.add(interpPos.east().east().south().south().south().south());
+                        BlockArray.add(interpPos.east().east().up().south());
+                        BlockArray.add(interpPos.east().east().up().south().south().south());
+                        BlockArray.add(interpPos.east().east().up().south().south().south().south());
+                        BlockArray.add(interpPos.east().east().up().up().south());
+                        BlockArray.add(interpPos.east().east().up().up().south().south());
+                        BlockArray.add(interpPos.east().east().up().up().south().south().south());
+                        BlockArray.add(interpPos.east().east().up().up().south().south().south().south());
+                        BlockArray.add(interpPos.east().south().south().south().south());
+                        BlockArray.add(interpPos.east().up().south().south().south().south());
+                        BlockArray.add(interpPos.east().up().up().south().south().south().south());
+                        BlockArray.add(interpPos.south().south().south().south());
+                        BlockArray.add(interpPos.up().up().south().south().south().south());
+                        BlockArray.add(interpPos.west().south().south().south().south());
+                        BlockArray.add(interpPos.west().west().south().south().south().south());
+                        BlockArray.add(interpPos.west().up().south().south().south().south());
+                        BlockArray.add(interpPos.west().up().up().south().south().south().south());
+                        BlockArray.add(interpPos.west().west().up().south().south().south().south());
+                        BlockArray.add(interpPos.west().west().up().up().south().south().south().south());
+                        BlockArray.add(interpPos.west().west().south());
+                        BlockArray.add(interpPos.west().west().south().south());
+                        BlockArray.add(interpPos.west().west().south().south().south());
+                        BlockArray.add(interpPos.west().west().up().south());
+                        BlockArray.add(interpPos.west().west().up().south().south().south());
+                        BlockArray.add(interpPos.west().west().up().up().south());
+                        BlockArray.add(interpPos.west().west().up().up().south().south());
+                        BlockArray.add(interpPos.west().west().up().up().south().south().south());
+                        BlockArray.add(interpPos.up().up().up().south());
+                        BlockArray.add(interpPos.up().up().up().south().south());
+                        BlockArray.add(interpPos.up().up().up().south().south().south());
+                        BlockArray.add(interpPos.up().up().up().east().south());
+                        BlockArray.add(interpPos.up().up().up().east().south().south());
+                        BlockArray.add(interpPos.up().up().up().east().south().south().south());
+                        BlockArray.add(interpPos.up().up().up().west().south());
+                        BlockArray.add(interpPos.up().up().up().west().south().south());
+                        BlockArray.add(interpPos.up().up().up().west().south().south().south());
+                        break;
+                    case West:
+                        interpPos = new BlockPos(pos.x, pos.y, pos.z).west().west();
+                        BlockArray.add(interpPos.south());
+                        BlockArray.add(interpPos.south().south());
+                        BlockArray.add(interpPos.south().up());
+                        BlockArray.add(interpPos.south().up().up());
+                        BlockArray.add(interpPos.south().south().up());
+                        BlockArray.add(interpPos.south().south().up().up());
+                        BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
+                        BlockArray.add(interpPos.north());
+                        BlockArray.add(interpPos.north().north());
+                        BlockArray.add(interpPos.north().up());
+                        BlockArray.add(interpPos.north().north().up());
+                        BlockArray.add(interpPos.north().up().up());
+                        BlockArray.add(interpPos.north().north().up().up());
+                        BlockArray.add(interpPos.south().south().west());
+                        BlockArray.add(interpPos.south().south().west().west());
+                        BlockArray.add(interpPos.south().south().west().west().west());
+                        BlockArray.add(interpPos.south().south().west().west().west().west());
+                        BlockArray.add(interpPos.south().south().up().west());
+                        BlockArray.add(interpPos.south().south().up().west().west().west());
+                        BlockArray.add(interpPos.south().south().up().west().west().west().west());
+                        BlockArray.add(interpPos.south().south().up().up().west());
+                        BlockArray.add(interpPos.south().south().up().up().west().west());
+                        BlockArray.add(interpPos.south().south().up().up().west().west().west());
+                        BlockArray.add(interpPos.south().south().up().up().west().west().west().west());
+                        BlockArray.add(interpPos.south().west().west().west().west());
+                        BlockArray.add(interpPos.south().up().west().west().west().west());
+                        BlockArray.add(interpPos.south().up().up().west().west().west().west());
+                        BlockArray.add(interpPos.west().west().west().west());
+                        BlockArray.add(interpPos.up().up().west().west().west().west());
+                        BlockArray.add(interpPos.north().west().west().west().west());
+                        BlockArray.add(interpPos.north().north().west().west().west().west());
+                        BlockArray.add(interpPos.north().up().west().west().west().west());
+                        BlockArray.add(interpPos.north().up().up().west().west().west().west());
+                        BlockArray.add(interpPos.north().north().up().west().west().west().west());
+                        BlockArray.add(interpPos.north().north().up().up().west().west().west().west());
+                        BlockArray.add(interpPos.north().north().west());
+                        BlockArray.add(interpPos.north().north().west().west());
+                        BlockArray.add(interpPos.north().north().west().west().west());
+                        BlockArray.add(interpPos.north().north().up().west());
+                        BlockArray.add(interpPos.north().north().up().west().west().west());
+                        BlockArray.add(interpPos.north().north().up().up().west());
+                        BlockArray.add(interpPos.north().north().up().up().west().west());
+                        BlockArray.add(interpPos.north().north().up().up().west().west().west());
+                        BlockArray.add(interpPos.up().up().up().west());
+                        BlockArray.add(interpPos.up().up().up().west().west());
+                        BlockArray.add(interpPos.up().up().up().west().west().west());
+                        BlockArray.add(interpPos.up().up().up().south().west());
+                        BlockArray.add(interpPos.up().up().up().south().west().west());
+                        BlockArray.add(interpPos.up().up().up().south().west().west().west());
+                        BlockArray.add(interpPos.up().up().up().north().west());
+                        BlockArray.add(interpPos.up().up().up().north().west().west());
+                        BlockArray.add(interpPos.up().up().up().north().west().west().west());
+                        break;
+                    default:
+                        break;
+                }
         }
     }
 
