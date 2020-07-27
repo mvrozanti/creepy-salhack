@@ -59,13 +59,13 @@ public final class GlobalLocationModule extends Module
 
             if (this.Donkey.getValue() && packet.getEntityType() == 31)
             {
-                SalHack.SendMessage(String.format("Donkey spawned at %s %s %s", packet.getX(), packet.getY(), packet.getZ()));
+                SalHack.SendMessage(String.format("Donkey spawned at %s %s %s", Math.round(packet.getX()), Math.round(packet.getY()), Math.round(packet.getZ())));
             } else if (this.Llama.getValue() && packet.getEntityType() == 103)
             {
-                SalHack.SendMessage(String.format("Llama spawned at %s %s %s", packet.getX(), packet.getY(), packet.getZ()));
+                SalHack.SendMessage(String.format("Llama spawned at %s %s %s", Math.round(packet.getX()), Math.round(packet.getY()), Math.round(packet.getZ())));
             } else if (this.Mule.getValue() && packet.getEntityType() == 32)
             {
-                SalHack.SendMessage(String.format("Mule spawned at %s %s %s", packet.getX(), packet.getY(), packet.getZ()));
+                SalHack.SendMessage(String.format("Mule spawned at %s %s %s", Math.round(packet.getX()), Math.round(packet.getY()), Math.round(packet.getZ())));
             }
         }
         else if (p_Event.getPacket() instanceof SPacketSoundEffect)
