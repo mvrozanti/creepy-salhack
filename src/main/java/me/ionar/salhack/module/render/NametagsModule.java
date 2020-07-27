@@ -152,7 +152,7 @@ public class NametagsModule extends Module
                             GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
                             RenderHelper.enableGUIStandardItemLighting();
                             GlStateManager.translate(
-                                    bounds[0] + (bounds[2] - bounds[0]) / 2 + x - (16 * stacks.size() / 2),
+                                    bounds[0] + (bounds[2] - bounds[0]) / 2 + x - (20 * stacks.size() / 2),
                                     bounds[1] + (bounds[3] - bounds[1]) - mc.fontRenderer.FONT_HEIGHT - 19,
                                     0);
                             mc.getRenderItem().renderItemAndEffectIntoGUI(stack, 0, 0);
@@ -175,48 +175,6 @@ public class NametagsModule extends Module
                                     stringsToDraw.add(String.format("%s", (int)l_ArmorBarPct + "%"));
                                 }
                                 int y = 0;
-
-                                if (stack.getEnchantmentTagList() != null)
-                                {
-                                    final NBTTagList tags = stack.getEnchantmentTagList();
-                                    for (int i = 0; i < tags.tagCount(); i++)
-                                    {
-                                        final NBTTagCompound tagCompound = tags.getCompoundTagAt(i);
-                                        if (tagCompound != null && Enchantment
-                                                .getEnchantmentByID(tagCompound.getByte("id")) != null)
-                                        {
-                                            final Enchantment enchantment = Enchantment
-                                                    .getEnchantmentByID(tagCompound.getShort("id"));
-                                            final short lvl = tagCompound.getShort("lvl");
-                                            if (enchantment != null)
-                                            {
-                                                String ench = "";
-                                                if (enchantment.isCurse())
-                                                {
-                                                    ench = ChatFormatting.RED
-                                                            + enchantment.getTranslatedName(lvl)
-                                                                    .substring(11).substring(0, 2)
-                                                            + ChatFormatting.GRAY + lvl;
-                                                }
-                                                else
-                                                {
-                                                    ench = enchantment.getTranslatedName(lvl).substring(0,
-                                                            2) + lvl;
-                                                }
-                                                stringsToDraw.add(ench);
-                                            }
-                                        }
-                                    }
-                                }
-
-                                // Enchanted gapple
-                                if (item == Items.GOLDEN_APPLE)
-                                {
-                                    if (stack.getItemDamage() == 1)
-                                    {
-                                        stringsToDraw.add(ChatFormatting.DARK_RED + "God");
-                                    }
-                                }
 
                                 for (String string : stringsToDraw)
                                 {
