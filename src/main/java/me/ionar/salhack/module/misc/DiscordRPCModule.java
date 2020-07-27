@@ -86,7 +86,7 @@ public class DiscordRPCModule extends Module
 
         if (GitHub.getValue())
         {
-            return "The SalHack source is hosted at https://github.com/ionar2/salhack !";
+            return "The CreepyOrb924 SalHack source is hosted at https://github.com/CreepyOrb924/salhack !";
         }
 
 
