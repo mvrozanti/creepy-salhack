@@ -32,6 +32,9 @@ Created by `ionar2` and many [others](https://github.com/ionar2/salhack/graphs/c
 ## Updates in Creepy Branch
 
 Deleted lots of useless mods.
+
 In global locations llamas and mules added.
+
 In autobuilder penis and nomad hut modes added.
+
 I don't feel like continuing posting here so just check out the releases to see what I changed.
