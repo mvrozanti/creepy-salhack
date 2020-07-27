@@ -857,6 +857,7 @@ public class AutoBuilderModule extends Module
                         BlockArray.add(interpPos.north());
                         BlockArray.add(interpPos.up());
                         BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
                         BlockArray.add(interpPos.south());
                         break;
                     case North:
@@ -865,6 +866,7 @@ public class AutoBuilderModule extends Module
                         BlockArray.add(interpPos.west());
                         BlockArray.add(interpPos.up());
                         BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
                         BlockArray.add(interpPos.east());
                         break;
                     case South:
@@ -873,6 +875,7 @@ public class AutoBuilderModule extends Module
                         BlockArray.add(interpPos.east());
                         BlockArray.add(interpPos.up());
                         BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
                         BlockArray.add(interpPos.west());
                         break;
                     case West:
@@ -881,6 +884,7 @@ public class AutoBuilderModule extends Module
                         BlockArray.add(interpPos.south());
                         BlockArray.add(interpPos.up());
                         BlockArray.add(interpPos.up().up());
+                        BlockArray.add(interpPos.up().up().up());
                         BlockArray.add(interpPos.north());
                         break;
                     default:
