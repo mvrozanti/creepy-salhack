@@ -65,8 +65,6 @@ public class ModuleManager
         Add(new VelocityModule());
         
         /// Exploit
-        Add(new AntiHungerModule());
-        Add(new CoordTPExploitModule());
         Add(new CrashExploitModule());
         Add(new EntityDesyncModule());
         Add(new LiquidInteractModule());
@@ -80,18 +78,12 @@ public class ModuleManager
 
         /// Misc
         Add(new AntiAFKModule());
-        Add(new AutoBonemealModule());
         Add(new AutoEatModule());
-        Add(new AutoDyeModule());
-        Add(new AutoFarmlandModule());
         Add(new AutoMendArmorModule());
         Add(new AutoMountModule());
         Add(new AutoReconnectModule());
-        Add(new AutoShearModule());
-        Add(new AutoShovelPathModule());
         Add(new AutoSignModule());
         Add(new AutoTameModule());
-        Add(new AutoTendModule());
         Add(new BuildHeightModule());
         Add(new ChatModificationsModule());
         Add(new ChatNotifierModule());
@@ -132,16 +124,13 @@ public class ModuleManager
         Add(new BlockHighlightModule());
         Add(new BreakHighlightModule());
         Add(new BrightnessModule());
-        Add(new ChunkAnimator());
         Add(new CityESPModule());
         Add(new ContainerPreviewModule());
         Add(new EntityESPModule());
-        Add(new FarmESPModule());
         Add(new FreecamModule());
         Add(new HandProgressModule());
         Add(new HoleESPModule());
         Add(new NametagsModule());
-        Add(new NoBobModule());
         Add(new NoRenderModule());
         Add(new ShulkerPreviewModule());
         Add(new SkeletonModule());
@@ -169,7 +158,6 @@ public class ModuleManager
         Add(new AutoWitherModule());
         Add(new EnderChestFarmer());
         Add(new FastPlaceModule());
-        Add(new LawnmowerModule());
         Add(new NoGlitchBlocksModule());
         Add(new NoWeatherModule());
         Add(new NukerModule());
