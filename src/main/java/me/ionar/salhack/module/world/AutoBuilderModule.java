@@ -53,7 +53,7 @@ import net.minecraft.util.math.Vec3d;
 
 public class AutoBuilderModule extends Module
 {
-    public final Value<Modes> Mode = new Value<Modes>("Mode", new String[] {""}, "Mode", Modes.Highway);
+    public final Value<Modes> Mode = new Value<Modes>("Mode", new String[] {""}, "Mode", Modes.Swastika);
     public final Value<BuildingModes> BuildingMode = new Value<BuildingModes>("BuildingMode", new String[] {""}, "Dynamic will update source block while walking, static keeps same position and resets on toggle", BuildingModes.Dynamic);
     public final Value<Integer> BlocksPerTick = new Value<Integer>("BlocksPerTick", new String[] {"BPT"}, "Blocks per tick", 4, 1, 10, 1);
     public final Value<Float> Delay = new Value<Float>("Delay", new String[] {"Delay"}, "Delay of the place", 0f, 0.0f, 1.0f, 0.1f);
@@ -61,15 +61,12 @@ public class AutoBuilderModule extends Module
     
     public enum Modes
     {
-        Highway,
         Swastika,
-        HighwayTunnel,
         Portal,
         Flat,
         Tower,
         Cover,
         Wall,
-        HighwayWall,
         Stair,
         Penis,
         NomadHut
@@ -434,85 +431,6 @@ public class AutoBuilderModule extends Module
         
         switch (Mode.getValue())
         {
-            case Highway:
-                switch (PlayerUtil.GetFacing())
-                {
-                    case East:
-                        BlockArray.add(orignPos.down());
-                        BlockArray.add(orignPos.down().east());
-                        BlockArray.add(orignPos.down().east().north());
-                        BlockArray.add(orignPos.down().east().south());
-                        BlockArray.add(orignPos.down().east().north().north());
-                        BlockArray.add(orignPos.down().east().south().south());
-                        BlockArray.add(orignPos.down().east().north().north().north());
-                        BlockArray.add(orignPos.down().east().south().south().south());
-                        BlockArray.add(orignPos.down().east().north().north().north().up());
-                        BlockArray.add(orignPos.down().east().south().south().south().up());
-                        break;
-                    case North:
-                        BlockArray.add(orignPos.down());
-                        BlockArray.add(orignPos.down().north());
-                        BlockArray.add(orignPos.down().north().east());
-                        BlockArray.add(orignPos.down().north().west());
-                        BlockArray.add(orignPos.down().north().east().east());
-                        BlockArray.add(orignPos.down().north().west().west());
-                        BlockArray.add(orignPos.down().north().east().east().east());
-                        BlockArray.add(orignPos.down().north().west().west().west());
-                        BlockArray.add(orignPos.down().north().east().east().east().up());
-                        BlockArray.add(orignPos.down().north().west().west().west().up());
-                        break;
-                    case South:
-                        BlockArray.add(orignPos.down());
-                        BlockArray.add(orignPos.down().south());
-                        BlockArray.add(orignPos.down().south().east());
-                        BlockArray.add(orignPos.down().south().west());
-                        BlockArray.add(orignPos.down().south().east().east());
-                        BlockArray.add(orignPos.down().south().west().west());
-                        BlockArray.add(orignPos.down().south().east().east().east());
-                        BlockArray.add(orignPos.down().south().west().west().west());
-                        BlockArray.add(orignPos.down().south().east().east().east().up());
-                        BlockArray.add(orignPos.down().south().west().west().west().up());
-                        break;
-                    case West:
-                        BlockArray.add(orignPos.down());
-                        BlockArray.add(orignPos.down().west());
-                        BlockArray.add(orignPos.down().west().north());
-                        BlockArray.add(orignPos.down().west().south());
-                        BlockArray.add(orignPos.down().west().north().north());
-                        BlockArray.add(orignPos.down().west().south().south());
-                        BlockArray.add(orignPos.down().west().north().north().north());
-                        BlockArray.add(orignPos.down().west().south().south().south());
-                        BlockArray.add(orignPos.down().west().north().north().north().up());
-                        BlockArray.add(orignPos.down().west().south().south().south().up());
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            case HighwayTunnel:
-                BlockArray.add(orignPos.down());
-                BlockArray.add(orignPos.down().north());
-                BlockArray.add(orignPos.down().north().east());
-                BlockArray.add(orignPos.down().north().west());
-                BlockArray.add(orignPos.down().north().east().east());
-                BlockArray.add(orignPos.down().north().west().west());
-                BlockArray.add(orignPos.down().north().east().east().east());
-                BlockArray.add(orignPos.down().north().west().west().west());
-                BlockArray.add(orignPos.down().north().east().east().east().up());
-                BlockArray.add(orignPos.down().north().west().west().west().up());
-                BlockArray.add(orignPos.down().north().east().east().east().up().up());
-                BlockArray.add(orignPos.down().north().west().west().west().up().up());
-                BlockArray.add(orignPos.down().north().east().east().east().up().up().up());
-                BlockArray.add(orignPos.down().north().west().west().west().up().up().up());
-                BlockArray.add(orignPos.down().north().east().east().east().up().up().up().up());
-                BlockArray.add(orignPos.down().north().west().west().west().up().up().up().up());
-                BlockArray.add(orignPos.down().north().east().east().east().up().up().up().up().west());
-                BlockArray.add(orignPos.down().north().west().west().west().up().up().up().up().east());
-                BlockArray.add(orignPos.down().north().east().east().east().up().up().up().up().west().west());
-                BlockArray.add(orignPos.down().north().west().west().west().up().up().up().up().east().east());
-                BlockArray.add(orignPos.down().north().east().east().east().up().up().up().up().west().west().west());
-                BlockArray.add(orignPos.down().north().west().west().west().up().up().up().up().east().east().east());
-                break;
             case Swastika:
                 switch (PlayerUtil.GetFacing())
                 {
@@ -760,57 +678,6 @@ public class AutoBuilderModule extends Module
                         for (int l_X = -3; l_X <= 3; ++l_X)
                         {
                             for (int l_Y = -3; l_Y <= 3; ++l_Y)
-                            {
-                                BlockArray.add(interpPos.add(0, l_Y, l_X));
-                            }
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                break;
-            case HighwayWall:
-                switch (PlayerUtil.GetFacing())
-                {
-                    case East:
-                        interpPos = new BlockPos(pos.x, pos.y, pos.z).east().east();
-                        
-                        for (int l_X = -2; l_X <= 3; ++l_X)
-                        {
-                            for (int l_Y = 0; l_Y < 3; ++l_Y)
-                            {
-                                BlockArray.add(interpPos.add(0, l_Y, l_X));
-                            }
-                        }
-                        break;
-                    case North:
-                        interpPos = new BlockPos(pos.x, pos.y, pos.z).north().north();
-                        
-                        for (int l_X = -2; l_X <= 3; ++l_X)
-                        {
-                            for (int l_Y = 0; l_Y < 3; ++l_Y)
-                            {
-                                BlockArray.add(interpPos.add(l_X, l_Y, 0));
-                            }
-                        }
-                        break;
-                    case South:
-                        interpPos = new BlockPos(pos.x, pos.y, pos.z).south().south();
-                        
-                        for (int l_X = -2; l_X <= 3; ++l_X)
-                        {
-                            for (int l_Y = 0; l_Y < 3; ++l_Y)
-                            {
-                                BlockArray.add(interpPos.add(l_X, l_Y, 0));
-                            }
-                        }
-                        break;
-                    case West:
-                        interpPos = new BlockPos(pos.x, pos.y, pos.z).west().west();
-                        
-                        for (int l_X = -2; l_X <= 3; ++l_X)
-                        {
-                            for (int l_Y = 0; l_Y < 3; ++l_Y)
                             {
                                 BlockArray.add(interpPos.add(0, l_Y, l_X));
                             }
