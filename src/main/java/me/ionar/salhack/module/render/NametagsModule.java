@@ -152,7 +152,7 @@ public class NametagsModule extends Module
                             GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
                             RenderHelper.enableGUIStandardItemLighting();
                             GlStateManager.translate(
-                                    bounds[0] + (bounds[2] - bounds[0]) / 2 + x - (20 * stacks.size() / 2),
+                                    bounds[0] + (bounds[2] - bounds[0]) / 2 + x - (16 * stacks.size() / 2),
                                     bounds[1] + (bounds[3] - bounds[1]) - mc.fontRenderer.FONT_HEIGHT - 19,
                                     0);
                             mc.getRenderItem().renderItemAndEffectIntoGUI(stack, 0, 0);
@@ -175,7 +175,6 @@ public class NametagsModule extends Module
                                     stringsToDraw.add(String.format("%s", (int)l_ArmorBarPct + "%"));
                                 }
                                 int y = 0;
-
                                 for (String string : stringsToDraw)
                                 {
                                     GlStateManager.pushMatrix();
