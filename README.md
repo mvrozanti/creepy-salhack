@@ -13,7 +13,7 @@ This project is **not maintained**.
  
 ## Installation
 
-Salhack is a forge mod for `1.12.2`. We provide already pre build jar files on our [release page](https://github.com/CreepyOrb924/creepy-salhack/releases). If you want to have changes before they get officially released check our [CI](https://github.com/ionar2/salhack/actions) out. (It builds a new jar file on every change we make.) To use salhack just drop the jar file in your mods folder and start forge. Have fun!
+Salhack is a forge mod for `1.12.2`. We provide already pre build jar files on our [release page](https://github.com/ionar2/salhack/releases). If you want to have changes before they get officially released check our [CI](https://github.com/ionar2/salhack/actions) out. (It builds a new jar file on every change we make.) To use salhack just drop the jar file in your mods folder and start forge. Have fun!
 
 **Tip:** You can open the GUI containing all "tweaks" with your left arrow at default (You can change that later.)
 
@@ -33,8 +33,8 @@ Created by `ionar2` and many [others](https://github.com/ionar2/salhack/graphs/c
 
 Deleted lots of useless mods.
 
-In global locations llamas and mules added.
+Added some stuff.
 
-In autobuilder penis and nomad hut modes added.
+Fixed some bugs.
 
-I don't feel like continuing posting here so just check out the releases to see what I changed.
+Check the [release page](https://github.com/CreepyOrb924/creepy-salhack/releases) to see updates in the project
