@@ -17,9 +17,9 @@ import java.util.HashMap;
 public class ArrayListComponent extends HudComponentItem
 {
     public final Value<Boolean> RainbowVal = new Value<Boolean>("Rainbow", new String[]
-    { "" }, "Makes a dynamic rainbow", true);
+            { "" }, "Makes a dynamic rainbow", true);
     public final Value<Boolean> NoBackground = new Value<Boolean>("NoBackground", new String[]
-    { "" }, "NoBackground on arraylist", false);
+            { "" }, "NoBackground on arraylist", false);
 
     public ArrayListComponent()
     {
