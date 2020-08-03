@@ -12,7 +12,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-Mod(modid = "creepy-salhack", name = "Creepy SalHack", version = SalHackMod.VERSION)
+@Mod(modid = "creepy-salhack", name = "Creepy SalHack", version = SalHackMod.VERSION)
 public final class SalHackMod
 {
     public static final String NAME = "Creepy SalHack";
