@@ -62,6 +62,7 @@ public class ModuleManager
         Add(new SelfTrapModule());
         Add(new SurroundModule());
         Add(new VelocityModule());
+        Add(new OldAutoCrystalRewrite());
 
         /// Exploit
         Add(new CrashExploitModule());
