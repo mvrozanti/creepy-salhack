@@ -1,51 +1,58 @@
 package me.ionar.salhack.gui.hud.components;
 
+import java.text.DecimalFormat;
+
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import me.ionar.salhack.gui.hud.HudComponentItem;
-import me.ionar.salhack.managers.ModuleManager;
-import me.ionar.salhack.module.combat.AutoCrystalModule;
-import me.ionar.salhack.module.combat.AutoCrystalRewrite;
-import me.ionar.salhack.module.combat.AutoTrap;
-import me.ionar.salhack.module.combat.KillAuraModule;
-import me.ionar.salhack.module.movement.SpeedModule;
+import me.ionar.salhack.main.SalHack;
+import me.ionar.salhack.util.Timer;
 import me.ionar.salhack.util.render.RenderUtil;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 
-public class PvPInfoComponent extends HudComponentItem
+public class SpeedComponent extends HudComponentItem
 {
-    public PvPInfoComponent()
+    final DecimalFormat Formatter = new DecimalFormat("#.#");
+    
+    public SpeedComponent()
     {
-        super("PvPInfo", 2, 290);
-        
-        _killAura = (KillAuraModule)ModuleManager.Get().GetMod(KillAuraModule.class);
-        _autoCrystal = (AutoCrystalModule)ModuleManager.Get().GetMod(AutoCrystalModule.class);
-        _autoTrap = (AutoTrap)ModuleManager.Get().GetMod(AutoTrap.class);
-        _speed = (SpeedModule)ModuleManager.Get().GetMod(SpeedModule.class);
-        _autoCrystalRewrite = (AutoCrystalRewrite)ModuleManager.Get().GetMod(AutoCrystalRewrite.class);
+        super("Speed", 2, 80);
     }
     
-    private KillAuraModule _killAura;
-    private AutoCrystalModule _autoCrystal;
-    private AutoTrap _autoTrap;
-    private SpeedModule _speed;
-    private AutoCrystalRewrite _autoCrystalRewrite;
+    private double PrevPosX;
+    private double PrevPosZ;
+    private Timer timer = new Timer();
+    
 
     @Override
     public void render(int p_MouseX, int p_MouseY, float p_PartialTicks)
     {
         super.render(p_MouseX, p_MouseY, p_PartialTicks);
 
-        final String aura = ChatFormatting.GRAY + "KA " + ChatFormatting.WHITE + (_killAura.isEnabled() ? ChatFormatting.GREEN + "ON" : ChatFormatting.RED + "OFF");
-        final String crystal = ChatFormatting.GRAY + "CA " + ChatFormatting.WHITE + ((_autoCrystal.isEnabled() || _autoCrystalRewrite.isEnabled()) ? ChatFormatting.GREEN + "ON" : ChatFormatting.RED + "OFF");
-        final String autoTrap = ChatFormatting.GRAY + "AT " + ChatFormatting.WHITE + (_autoTrap.isEnabled() ? ChatFormatting.GREEN + "ON" : ChatFormatting.RED + "OFF");
-        final String speed = ChatFormatting.GRAY + "S " + ChatFormatting.WHITE + (_speed.isEnabled() ? ChatFormatting.GREEN + "ON" : ChatFormatting.RED + "OFF");
+        if (timer.passed(1000))
+        {
+            PrevPosX = mc.player.prevPosX;
+            PrevPosZ = mc.player.prevPosZ;
+        }
         
-        RenderUtil.drawStringWithShadow(aura, GetX(), GetY(), -1);
-        RenderUtil.drawStringWithShadow(crystal, GetX(), GetY()+12, -1);
-        RenderUtil.drawStringWithShadow(autoTrap, GetX(), GetY()+24, -1);
-        RenderUtil.drawStringWithShadow(speed, GetX(), GetY()+36, -1);
+        final double deltaX = mc.player.posX - PrevPosX;
+        final double deltaZ = mc.player.posZ - PrevPosZ;
+        
+        float l_Distance = MathHelper.sqrt(deltaX * deltaX + deltaZ * deltaZ);
 
-        SetWidth(RenderUtil.getStringWidth(aura));
-        SetHeight(RenderUtil.getStringHeight(crystal)+RenderUtil.getStringHeight(aura)+RenderUtil.getStringHeight(autoTrap)+RenderUtil.getStringHeight(speed));
+        double l_KMH = Math.floor(( l_Distance/1000.0f ) / ( 0.05f/3600.0f ));
+        
+        String l_Formatter = Formatter.format(l_KMH);
+        
+        if (!l_Formatter.contains("."))
+            l_Formatter += ".0";
+        
+        final String bps = ChatFormatting.GRAY + "Speed " + ChatFormatting.WHITE + l_Formatter + "km/h";
+
+        SetWidth(RenderUtil.getStringWidth(bps));
+        SetHeight(RenderUtil.getStringHeight(bps)+1);
+
+        RenderUtil.drawStringWithShadow(bps, GetX(), GetY(), -1);
     }
 }
