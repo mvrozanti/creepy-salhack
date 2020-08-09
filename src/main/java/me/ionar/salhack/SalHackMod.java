@@ -21,7 +21,6 @@ public final class SalHackMod
     public static final Logger log = LogManager.getLogger("sal");
 
     public static final EventBus EVENT_BUS = new EventManager();
-    public static Blur instance;
 
 
     @Mod.EventHandler
