@@ -58,7 +58,6 @@ public class ModuleManager
         Add(new CriticalsModule());
         Add(new HoleFillerModule());
         Add(new KillAuraModule());
-        Add(new OffhandModule());
         Add(new ReachModule());
         Add(new SelfTrapModule());
         Add(new SurroundModule());
