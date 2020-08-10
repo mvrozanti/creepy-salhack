@@ -52,8 +52,6 @@ public final class AutoTotemModule extends Module
         super("AutoTotem", new String[]
         { "Totem" }, "Automatically places a totem of undying in your offhand", "NONE", 0xDADB24, ModuleType.COMBAT);
     }
-    
-    private OffhandModule OffhandMod = null;
 
     @Override
     public String getMetaData()
@@ -111,7 +109,7 @@ public final class AutoTotemModule extends Module
     @EventHandler
     private Listener<EventPlayerUpdate> OnPlayerUpdate = new Listener<>(p_Event ->
     {
-        if (mc.currentScreen != null && (!(mc.currentScreen instanceof GuiInventory) && !(mc.currentScreen instanceof SalGuiScreen)) || OffhandMod.isEnabled())
+        if (mc.currentScreen != null && (!(mc.currentScreen instanceof GuiInventory) && !(mc.currentScreen instanceof SalGuiScreen)))
             return;
         
         if (!mc.player.getHeldItemMainhand().isEmpty())
@@ -145,8 +143,7 @@ public final class AutoTotemModule extends Module
     public void onEnable()
     {
         super.onEnable();
-        
-        OffhandMod = (OffhandModule)ModuleManager.Get().GetMod(OffhandModule.class);
+
     }
     
     public Item GetItemFromModeVal(AutoTotemMode p_Val)
