@@ -11,11 +11,11 @@ import me.ionar.salhack.util.render.RenderUtil;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
-public class SpeedComponent extends HudComponentItem
+public class PvPInfoComponent extends HudComponentItem
 {
     final DecimalFormat Formatter = new DecimalFormat("#.#");
     
-    public SpeedComponent()
+    public PvPInfoComponent()
     {
         super("Speed", 2, 80);
     }
