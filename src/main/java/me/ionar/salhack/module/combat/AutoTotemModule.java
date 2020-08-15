@@ -45,6 +45,7 @@ public final class AutoTotemModule extends Module
         Pearl,
         Chorus,
         Strength,
+        Shield,
     }
     
     public AutoTotemModule()
@@ -160,6 +161,8 @@ public final class AutoTotemModule extends Module
                 return Items.CHORUS_FRUIT;
             case Strength:
                 return Items.POTIONITEM;
+            case Shield:
+                return Items.SHIELD;
             default:
                 break;
         }
@@ -181,6 +184,8 @@ public final class AutoTotemModule extends Module
                 return "Chorus";
             case Strength:
                 return "Strength";
+            case Shield:
+                return "Shield";
             default:
                 break;
         }
