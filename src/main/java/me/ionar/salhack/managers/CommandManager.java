@@ -20,7 +20,6 @@ public class CommandManager
     public void InitalizeCommands()
     {
         Commands.add(new FriendCommand());
-        Commands.add(new EnemyCommand());
         Commands.add(new HelpCommand());
         Commands.add(new SoundReloadCommand());
         Commands.add(new HClipCommand());
