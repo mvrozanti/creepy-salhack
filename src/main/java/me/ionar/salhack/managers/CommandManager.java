@@ -20,6 +20,7 @@ public class CommandManager
     public void InitalizeCommands()
     {
         Commands.add(new FriendCommand());
+        Commands.add(new EnemyCommand());
         Commands.add(new HelpCommand());
         Commands.add(new SoundReloadCommand());
         Commands.add(new HClipCommand());
@@ -31,6 +32,7 @@ public class CommandManager
         Commands.add(new FontCommand());
         Commands.add(new PresetsCommand());
         Commands.add(new WaypointCommand());
+        Commands.add(new GitHubCommand());
         
         ModuleManager.Get().GetModuleList().forEach(p_Mod ->
         {
