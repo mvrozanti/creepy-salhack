@@ -50,6 +50,8 @@ public class FakePlayer extends Module
 
         _fakePlayer.copyLocationAndAnglesFrom(mc.player);
         _fakePlayer.rotationYawHead = mc.player.rotationYawHead;
+        // Thanks to Phobos for the idea of copying your player invetory.
+        _fakePlayer.inventory.copyInventory(mc.player.inventory);
         mc.world.addEntityToWorld(-100, _fakePlayer);
     }
 
