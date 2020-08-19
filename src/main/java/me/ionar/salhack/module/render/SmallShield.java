@@ -27,8 +27,9 @@ public class SmallShield extends Module
         if (TallSword.getValue()) {
             if(mc.player.getHeldItemMainhand().getItem() instanceof ItemSword) {
                 mc.getItemRenderer().equippedProgressMainHand = 2.0f;
+            } else {
+                mc.entityRenderer.itemRenderer.equippedProgressMainHand = MainHand.getValue();
             }
-            mc.entityRenderer.itemRenderer.equippedProgressMainHand = MainHand.getValue();
             mc.entityRenderer.itemRenderer.equippedProgressOffHand = OffHand.getValue();
         } else {
             mc.entityRenderer.itemRenderer.equippedProgressMainHand = MainHand.getValue();
