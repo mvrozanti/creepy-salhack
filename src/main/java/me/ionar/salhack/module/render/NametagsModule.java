@@ -59,8 +59,7 @@ public class NametagsModule extends Module
     @EventHandler
     private Listener<EventRenderGameOverlay> OnRenderGameOverlay = new Listener<>(p_Event ->
     {
-        mc.world.loadedEntityList.stream().filter(EntityUtil::isLiving).filter(entity -> !EntityUtil.isFakeLocalPlayer(entity))
-                .filter(entity -> (entity instanceof EntityPlayer && mc.player != entity)).forEach(e ->
+        mc.world.loadedEntityList.stream().filter(EntityUtil::isLiving).filter(entity -> (entity instanceof EntityPlayer && mc.player != entity)).forEach(e ->
                 {
                     RenderNameTagFor((EntityPlayer)e, p_Event);
                 });
