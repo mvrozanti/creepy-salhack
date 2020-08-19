@@ -48,8 +48,6 @@ public class ImageManager
     
     public void Load()
     {
-        LoadImage("BloodOverlay");
-        LoadImage("RareFrame");
         LoadImage("OutlinedEllipse");
         LoadImage("Arrow");
         LoadImage("blockimg");
