@@ -128,12 +128,12 @@ public class ModuleManager
         Add(new ContainerPreviewModule());
         Add(new EntityESPModule());
         Add(new FreecamModule());
-        Add(new HandProgressModule());
         Add(new HoleESPModule());
         Add(new NametagsModule());
         Add(new NoRenderModule());
         Add(new ShulkerPreviewModule());
         Add(new SkeletonModule());
+        Add(new SmallShield());
         Add(new StorageESPModule());
         Add(new TracersModule());
         Add(new TrajectoriesModule());
