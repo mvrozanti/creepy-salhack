@@ -5,12 +5,12 @@ import org.apache.logging.log4j.Logger;
 
 import me.ionar.salhack.main.ForgeEventProcessor;
 import me.ionar.salhack.main.SalHack;
-import me.ionar.salhack.main.Wrapper;
 import me.zero.alpine.fork.bus.EventBus;
 import me.zero.alpine.fork.bus.EventManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import org.lwjgl.opengl.Display;
 
 @Mod(modid = "creepy-salhack", name = "Creepy SalHack", version = SalHackMod.VERSION)
 public final class SalHackMod
@@ -27,9 +27,12 @@ public final class SalHackMod
     public void init(FMLInitializationEvent event)
     {
         log.info("init creepy-salhack v: " + VERSION);
+        Display.setTitle(NAME + " v: " + VERSION);
 
         SalHack.Init();
 
         MinecraftForge.EVENT_BUS.register(new ForgeEventProcessor());
+
+
     }
 }
