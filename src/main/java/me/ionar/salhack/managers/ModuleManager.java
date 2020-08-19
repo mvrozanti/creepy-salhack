@@ -125,7 +125,6 @@ public class ModuleManager
         Add(new BreakHighlightModule());
         Add(new BrightnessModule());
         Add(new CityESPModule());
-        Add(new ContainerPreviewModule());
         Add(new EntityESPModule());
         Add(new FreecamModule());
         Add(new HoleESPModule());
