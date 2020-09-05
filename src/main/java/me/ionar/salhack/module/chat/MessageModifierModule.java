@@ -52,10 +52,12 @@ public class MessageModifierModule extends Module{
                 0xDB2485, Module.ModuleType.Chat);
     }
 
+    public String setSuffix = "creepy-salhack";
+
     @EventHandler
     private final Listener<EventPlayerSendChatMessage> OnSendChatMsg = new Listener<>(p_Event ->
     {
-        if (p_Event.Message.startsWith("/") || p_Event.Message.startsWith("*") || p_Event.Message.startsWith("-") || p_Event.Message.startsWith("#") || p_Event.Message.startsWith("$") || p_Event.Message.startsWith("^") || p_Event.Message.startsWith(";") || p_Event.Message.startsWith(".") || p_Event.Message.startsWith("&") || p_Event.Message.startsWith(","))
+        if (p_Event.Message.startsWith("/") || p_Event.Message.startsWith("*") || p_Event.Message.startsWith("-") || p_Event.Message.startsWith("#") || p_Event.Message.startsWith("$") || p_Event.Message.startsWith("^") || p_Event.Message.startsWith(";") || p_Event.Message.startsWith(".") || p_Event.Message.startsWith("&") || p_Event.Message.startsWith(",") || p_Event.Message.startsWith("!"))
             return;
 
         String suffix = "creepy-salhack";
@@ -74,7 +76,7 @@ public class MessageModifierModule extends Module{
                    suffix = "uwu creepy-salhack";
                    break;
                case Classic:
-                   l_Message = convertToUFullWidth(l_Message.toLowerCase());
+                   l_Message = fancy(l_Message);
            }
        }
 
@@ -205,47 +207,6 @@ public class MessageModifierModule extends Module{
         return new_base;
     }
 
-    private String convertToUFullWidth(String base) {
-        String new_base;
-        new_base = base.replace("a", "\uff41");
-        new_base = new_base.replace("b", "\uff42");
-        new_base = new_base.replace("c", "\uff43");
-        new_base = new_base.replace("d", "\uff44");
-        new_base = new_base.replace("e", "\uff45");
-        new_base = new_base.replace("f", "\uff46");
-        new_base = new_base.replace("g", "\uff47");
-        new_base = new_base.replace("h", "\uff48");
-        new_base = new_base.replace("i", "\uff49");
-        new_base = new_base.replace("j", "\uff4A");
-        new_base = new_base.replace("k", "\uff4B");
-        new_base = new_base.replace("l", "\uff4C");
-        new_base = new_base.replace("m", "\uff4D");
-        new_base = new_base.replace("n", "\uff4E");
-        new_base = new_base.replace("o", "\uff4F");
-        new_base = new_base.replace("p", "\uff50");
-        new_base = new_base.replace("q", "\uff51");
-        new_base = new_base.replace("r", "\uff52");
-        new_base = new_base.replace("s", "\uff53");
-        new_base = new_base.replace("t", "\uff54");
-        new_base = new_base.replace("u", "\uff55");
-        new_base = new_base.replace("v", "\uff56");
-        new_base = new_base.replace("w", "\uff57");
-        new_base = new_base.replace("x", "\uff58");
-        new_base = new_base.replace("y", "\uff59");
-        new_base = new_base.replace("z", "\uff5A");
-        new_base = new_base.replace("0", "\uff10");
-        new_base = new_base.replace("1", "\uff11");
-        new_base = new_base.replace("2", "\uff12");
-        new_base = new_base.replace("3", "\uff13");
-        new_base = new_base.replace("4", "\uff14");
-        new_base = new_base.replace("5", "\uff15");
-        new_base = new_base.replace("6", "\uff16");
-        new_base = new_base.replace("7", "\uff17");
-        new_base = new_base.replace("8", "\uff18");
-        new_base = new_base.replace("9", "\uff19");
-        return new_base;
-    }
-
     private String getSeparatorMode() {
         String returnString;
         switch (Mode.getValue()) {
@@ -274,5 +235,18 @@ public class MessageModifierModule extends Module{
                 throw new IllegalStateException("Unexpected value: " + ColorMode.getValue());
         }
         return returnValue;
+    }
+
+    private String fancy(String input) {
+        final StringBuilder sb = new StringBuilder();
+
+        for (char c : input.toCharArray()) {
+            if (c >= 0x21 && c <= 0x80) {
+                sb.append(Character.toChars(c + 0xFEE0));
+            } else {
+                sb.append(c);
+            }
+        }
+        return sb.toString();
     }
 }
