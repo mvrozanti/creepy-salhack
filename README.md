@@ -1,4 +1,4 @@
-[![Sal Hack logo](/src/main/resources/assets/salhack/imgs/SalHackWatermark.png)](https://github.com/ionar2/salhack/)
+[![Sal Hack logo](/src/main/resources/assets/salhack/imgs/SalHackWatermark.png)](https://discord.gg/mj9sVWf)
 
 [![Discord](https://img.shields.io/discord/694337597371056198?label=discord&logo=discord&logoColor=white)](https://discord.gg/UEyGRGu) 
 [![Gradle Build](https://github.com/ionar2/salhack/workflows/Gradle%20Build/badge.svg?branch=master)](https://github.com/ionar2/salhack/actions)
