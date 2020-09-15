@@ -26,8 +26,8 @@ public final class SalHackMod
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        log.info("init Creepy Salhack v: " + VERSION);
-        Display.setTitle(NAME + " v: " + VERSION);
+        log.info("init Creepy Salhack v" + VERSION);
+        Display.setTitle(NAME + " v" + VERSION);
 
         SalHack.Init();
 
