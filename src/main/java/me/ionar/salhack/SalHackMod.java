@@ -16,7 +16,7 @@ import org.lwjgl.opengl.Display;
 public final class SalHackMod
 {
     public static final String NAME = "Creepy SalHack";
-    public static final String VERSION = "2.06.4";
+    public static final String VERSION = "2.7";
 
     public static final Logger log = LogManager.getLogger("sal");
 
@@ -26,7 +26,7 @@ public final class SalHackMod
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        log.info("init creepy-salhack v: " + VERSION);
+        log.info("init Creepy Salhack v: " + VERSION);
         Display.setTitle(NAME + " v: " + VERSION);
 
         SalHack.Init();
