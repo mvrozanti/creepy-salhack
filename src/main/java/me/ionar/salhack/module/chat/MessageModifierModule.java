@@ -49,7 +49,7 @@ public class MessageModifierModule extends Module{
     {
         super("MessageModifier", new String[]
                         { "MessageModifier" }, "Modifies the messages you send to chat.", "NONE",
-                0xDB2485, Module.ModuleType.Chat);
+                0xDB2485, Module.ModuleType.CHAT);
     }
 
     public String setSuffix = "creepy-salhack";
