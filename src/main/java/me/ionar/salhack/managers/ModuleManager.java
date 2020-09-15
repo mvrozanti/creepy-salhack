@@ -58,17 +58,20 @@ public class ModuleManager
         Add(new CriticalsModule());
         Add(new HoleFillerModule());
         Add(new KillAuraModule());
+        Add(new MiddleClickPearlModule());
+        Add(new OldAutoCrystalRewrite());
         Add(new ReachModule());
         Add(new SelfTrapModule());
         Add(new SurroundModule());
         Add(new VelocityModule());
-        Add(new OldAutoCrystalRewrite());
 
         /// Exploit
         Add(new CrashExploitModule());
         Add(new EntityDesyncModule());
+        Add(new GhostModule());
         Add(new LiquidInteractModule());
         Add(new MountBypassModule());
+        Add(new NoInteractModule());
         Add(new NoMiningTrace());
         Add(new NewChunksModule());
         Add(new PacketCancellerModule());
@@ -82,6 +85,7 @@ public class ModuleManager
         Add(new AutoMendArmorModule());
         Add(new AutoMountModule());
         Add(new AutoReconnectModule());
+        Add(new AutoRespawnModule());
         Add(new AutoSignModule());
         Add(new AutoTameModule());
         Add(new BuildHeightModule());
@@ -108,10 +112,13 @@ public class ModuleManager
         Add(new ElytraFlyModule());
         Add(new EntityControlModule());
         Add(new FlightModule());
+        Add(new GlideModule());
+        Add(new HorseJump());
+        Add(new JesusModule());
         Add(new NoFallModule());
         Add(new NoRotateModule());
         Add(new NoSlowModule());
-        Add(new JesusModule());
+        Add(new ParkourJump());
         Add(new SafeWalkModule());
         Add(new SneakModule());
         Add(new SpeedModule());
@@ -128,6 +135,7 @@ public class ModuleManager
         Add(new EntityESPModule());
         Add(new FreecamModule());
         Add(new HoleESPModule());
+        Add(new MobOwnerModule());
         Add(new NametagsModule());
         Add(new NoRenderModule());
         Add(new ShulkerPreviewModule());
@@ -156,6 +164,7 @@ public class ModuleManager
         Add(new AutoToolModule());
         Add(new AutoTunnelModule());
         Add(new AutoWitherModule());
+        Add(new CoordsSpooferModule());
         Add(new EnderChestFarmer());
         Add(new FastPlaceModule());
         Add(new NoGlitchBlocksModule());
@@ -171,6 +180,11 @@ public class ModuleManager
         /// Schematica
         Add(new PrinterModule());
         Add(new PrinterBypassModule());
+        
+        //
+        Add(new ChatModificationsModule());
+        Add(new MessageModifierModule());
+        Add(new PopBobSexDupeModule());
 
         LoadExternalModules();
 
