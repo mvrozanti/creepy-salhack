@@ -2,6 +2,7 @@ package me.ionar.salhack.mixin.client;
 
 import java.util.List;
 
+import me.ionar.salhack.module.chat.ChatModificationsModule;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,7 +13,6 @@ import com.google.common.collect.Lists;
 
 import me.ionar.salhack.main.Wrapper;
 import me.ionar.salhack.managers.ModuleManager;
-import me.ionar.salhack.module.misc.ChatModificationsModule;
 import net.minecraft.client.gui.ChatLine;
 import net.minecraft.client.gui.GuiNewChat;
 import net.minecraft.client.gui.GuiUtilRenderComponents;
