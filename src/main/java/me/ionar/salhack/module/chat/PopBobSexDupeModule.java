@@ -10,7 +10,7 @@ public class PopBobSexDupeModule extends Module {
     {
         super("PopBobSexDupe", new String[]
                         { "PopBobSexDupe" }, "Have sexual intercorse with PopBob for items to dupe.", "NONE",
-                0xDB2485, Module.ModuleType.Chat);
+                0xDB2485, Module.ModuleType.CHAT);
     }
 
     @Override
