@@ -18,6 +18,7 @@ import me.ionar.salhack.module.misc.*;
 import me.ionar.salhack.module.movement.*;
 import me.ionar.salhack.module.render.*;
 import me.ionar.salhack.module.schematica.*;
+import me.ionar.salhack.module.chat.*;
 import me.ionar.salhack.module.ui.*;
 import me.ionar.salhack.module.world.*;
 import me.ionar.salhack.preset.Preset;
@@ -89,7 +90,6 @@ public class ModuleManager
         Add(new AutoSignModule());
         Add(new AutoTameModule());
         Add(new BuildHeightModule());
-        Add(new ChatModificationsModule());
         Add(new ChatNotifierModule());
         Add(new ChestStealerModule());
         Add(new ChestSwapModule());
@@ -181,7 +181,7 @@ public class ModuleManager
         Add(new PrinterModule());
         Add(new PrinterBypassModule());
         
-        //
+        // Chat
         Add(new ChatModificationsModule());
         Add(new MessageModifierModule());
         Add(new PopBobSexDupeModule());
