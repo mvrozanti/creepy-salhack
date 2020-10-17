@@ -109,8 +109,10 @@ public class ModuleManager
         Add(new AntiLevitationModule());
         Add(new AutoWalkModule());
         Add(new BlinkModule());
+        Add(new BoatFlyModule());
         Add(new ElytraFlyModule());
         Add(new EntityControlModule());
+        Add(new EntitySpeedModule());
         Add(new FlightModule());
         Add(new GlideModule());
         Add(new HorseJump());

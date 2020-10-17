@@ -33,6 +33,5 @@ public final class SalHackMod
 
         MinecraftForge.EVENT_BUS.register(new ForgeEventProcessor());
 
-
     }
 }
