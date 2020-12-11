@@ -32,7 +32,7 @@ public class ChestCountComponent extends HudComponentItem
         final String l_Chests = l_Hud.Rainbow.getValue() ? "Chests: " + chest : ChatFormatting.GRAY + "Chests: " + ChatFormatting.WHITE + chest;
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(l_Chests, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(l_Chests, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
 
         SetWidth(RenderUtil.getStringWidth(l_Chests));
         SetHeight(RenderUtil.getStringHeight(l_Chests));

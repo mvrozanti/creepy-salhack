@@ -27,7 +27,7 @@ public class DirectionComponent extends HudComponentItem
 
         final String direction = l_Hud.Rainbow.getValue() ? String.format("%s" + " " + "%s", this.getFacing(), this.getTowards()) : String.format("%s" + " " + ChatFormatting.GRAY + "%s", this.getFacing(), this.getTowards());
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(direction, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(direction, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
         
         SetWidth(RenderUtil.getStringWidth(direction));
         SetHeight(RenderUtil.getStringHeight(direction) + 1);

@@ -82,6 +82,7 @@ public class ModuleManager
 
         /// Misc
         Add(new AntiAFKModule());
+        Add(new AutoDuperModule());
         Add(new AutoEatModule());
         Add(new AutoMendArmorModule());
         Add(new AutoMountModule());
@@ -98,6 +99,7 @@ public class ModuleManager
         Add(new FriendsModule());
         Add(new GlobalLocationModule());
         Add(new HotbarCacheModule());
+        Add(new ManualDupeModule());
         Add(new MiddleClickFriendsModule());
         Add(new RetardChatModule());
         Add(new StopWatchModule());
@@ -111,6 +113,7 @@ public class ModuleManager
         Add(new BlinkModule());
         Add(new ElytraFlyModule());
         Add(new EntityControlModule());
+        Add(new EntitySpeedModule());
         Add(new FlightModule());
         Add(new GlideModule());
         Add(new HorseJump());
@@ -149,6 +152,9 @@ public class ModuleManager
         Add(new WaypointsModule());
 
         /// UI
+        Add(new ChestModule());
+        Add(new DupeModule());
+
         Add(new ColorsModule());
         Add(new ConsoleModule());
         Add(new ClickGuiModule());

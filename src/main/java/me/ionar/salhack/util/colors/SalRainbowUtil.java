@@ -24,6 +24,7 @@ public class SalRainbowUtil
     private Timer RainbowSpeed = new Timer();
     
     private int m_Timer;
+    private int l_I = 0;
     
     public int GetRainbowColorAt(int p_Index)
     {
@@ -63,8 +64,8 @@ public class SalRainbowUtil
         CurrentRainbowIndexes.add(l_Index);
     }
 
-    public int getRainbowColorNumber(int l_I) {
-        l_I += 20;
+    public int getRainbowColorNumber() {
+        l_I += 1;
         if (l_I >= 355) {
             l_I = 0;
         }

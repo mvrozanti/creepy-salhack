@@ -38,7 +38,7 @@ public class PingComponent extends HudComponentItem
         this.SetHeight(RenderUtil.getStringHeight(ping)+1);
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(ping, this.GetX(), this.GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(ping, this.GetX(), this.GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
     }
 
 }

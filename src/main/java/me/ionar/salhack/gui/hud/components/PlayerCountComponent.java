@@ -26,7 +26,7 @@ public class PlayerCountComponent extends HudComponentItem
         final String playerCount = l_Hud.Rainbow.getValue() ? "Players: " + mc.player.connection.getPlayerInfoMap().size() : ChatFormatting.GRAY + "Players: " + ChatFormatting.WHITE + mc.player.connection.getPlayerInfoMap().size();
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(playerCount, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(playerCount, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
         
         SetWidth(RenderUtil.getStringWidth(playerCount));
         SetHeight(RenderUtil.getStringHeight(playerCount) + 1);

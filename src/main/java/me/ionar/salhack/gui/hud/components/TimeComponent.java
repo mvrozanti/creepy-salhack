@@ -30,7 +30,7 @@ public class TimeComponent extends HudComponentItem
         final String time = new SimpleDateFormat("h:mm a").format(new Date());
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(time, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(time, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
 
         SetWidth(RenderUtil.getStringWidth(time));
         SetHeight(RenderUtil.getStringHeight(time));

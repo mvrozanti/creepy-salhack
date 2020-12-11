@@ -45,7 +45,7 @@ public class TotemCountComponent extends HudComponentItem
         SetWidth(RenderUtil.getStringWidth(totemCount));
         SetHeight(RenderUtil.getStringHeight(totemCount));
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(totemCount, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(totemCount, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
     }
 
 }

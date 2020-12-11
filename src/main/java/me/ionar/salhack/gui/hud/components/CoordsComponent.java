@@ -71,7 +71,7 @@ public class CoordsComponent extends HudComponentItem
                 SetHeight(RenderUtil.getStringHeight(l_Coords));
 
                 Rainbow.OnRender();
-                RenderUtil.drawStringWithShadow(l_Coords, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+                RenderUtil.drawStringWithShadow(l_Coords, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
 
                 break;
             case NextLine:
@@ -79,9 +79,9 @@ public class CoordsComponent extends HudComponentItem
                 String l_Y = l_Hud.Rainbow.getValue() ? String.format("Y: %s [%s]", format(mc.player.posY), NetherCoords.getValue() ? format(mc.player.posY) : "") : String.format("%sY: %s%s [%s]", ChatFormatting.GRAY, ChatFormatting.WHITE, format(mc.player.posY), NetherCoords.getValue() ? format(mc.player.posY) : "");
                 String l_Z = l_Hud.Rainbow.getValue() ? String.format("Z: %s [%s]", format(getZ()), NetherCoords.getValue() ? mc.player.dimension != -1 ? format(getZ() / 8) : format(getZ() * 8) : "") : String.format("%sZ: %s%s [%s]", ChatFormatting.GRAY, ChatFormatting.WHITE, format(getZ()), NetherCoords.getValue() ? mc.player.dimension != -1 ? format(getZ() / 8) : format(getZ() * 8) : "");
                 Rainbow.OnRender();
-                RenderUtil.drawStringWithShadow(l_X, GetX(), GetY(), -1);
-                RenderUtil.drawStringWithShadow(l_Y, GetX(), GetY()+RenderUtil.getStringHeight(l_X), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
-                RenderUtil.drawStringWithShadow(l_Z, GetX(), GetY()+RenderUtil.getStringHeight(l_X)+RenderUtil.getStringHeight(l_Y), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+                RenderUtil.drawStringWithShadow(l_X, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
+                RenderUtil.drawStringWithShadow(l_Y, GetX(), GetY()+RenderUtil.getStringHeight(l_X), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
+                RenderUtil.drawStringWithShadow(l_Z, GetX(), GetY()+RenderUtil.getStringHeight(l_X)+RenderUtil.getStringHeight(l_Y), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
 
                 SetWidth(RenderUtil.getStringWidth(l_X));
                 SetHeight(RenderUtil.getStringHeight(l_X)*3);

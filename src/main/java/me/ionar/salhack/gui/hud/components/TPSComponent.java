@@ -27,7 +27,7 @@ public class TPSComponent extends HudComponentItem
         final String tickrate = l_Hud.Rainbow.getValue() ? String.format("TPS %.2f", TickRateManager.Get().getTickRate()) : String.format(ChatFormatting.GRAY + "TPS%s %.2f", ChatFormatting.WHITE, TickRateManager.Get().getTickRate());
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(tickrate, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(tickrate, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
         
         SetWidth(RenderUtil.getStringWidth(tickrate));
         SetHeight(RenderUtil.getStringHeight(tickrate) + 1);

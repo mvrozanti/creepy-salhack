@@ -33,6 +33,6 @@ public class BiomeComponent extends HudComponentItem
         SetHeight(RenderUtil.getStringHeight(biome.getBiomeName()));
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(biome.getBiomeName(), GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(biome.getBiomeName(), GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
     }
 }

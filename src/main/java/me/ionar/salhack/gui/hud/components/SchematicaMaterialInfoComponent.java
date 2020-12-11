@@ -38,7 +38,7 @@ public class SchematicaMaterialInfoComponent extends HudComponentItem
             final String l_String = "No Schematic loaded";
 
             Rainbow.OnRender();
-            RenderUtil.drawStringWithShadow(l_String, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+            RenderUtil.drawStringWithShadow(l_String, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
             SetWidth(RenderUtil.getStringWidth(l_String));
             SetHeight(RenderUtil.getStringHeight(l_String));
             GL11.glPopMatrix();
@@ -58,7 +58,7 @@ public class SchematicaMaterialInfoComponent extends HudComponentItem
 
             GuiHelper.drawItemStack(l_Stack.itemStack, (int)GetX(), (int)(GetY()+l_Height));
             Rainbow.OnRender();
-            float l_Width = RenderUtil.drawStringWithShadow(l_String, GetX()+20, GetY()+l_Height+4, l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1)+22;
+            float l_Width = RenderUtil.drawStringWithShadow(l_String, GetX()+20, GetY()+l_Height+4, l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1)+22;
             
             if (l_Width >= l_MaxWidth)
                 l_MaxWidth = l_Width;

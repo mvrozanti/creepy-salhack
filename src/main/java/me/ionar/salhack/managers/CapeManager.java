@@ -117,10 +117,10 @@ public class CapeManager implements Listenable
         if (Wrapper.GetMC().renderEngine == null)
             return;
 
-        if (CapeUsers.containsKey(p_Event.Player.getName()))
+        if (CapeUsers.containsKey(p_Event.Player.getUniqueID().toString())); //thanks Seppuku
         {
             p_Event.cancel();
-            p_Event.SetResourceLocation(CapeUsers.get(p_Event.Player.getName()));
+            p_Event.SetResourceLocation(CapeUsers.get(p_Event.Player.getUniqueID().toString()));
         }
     });
 

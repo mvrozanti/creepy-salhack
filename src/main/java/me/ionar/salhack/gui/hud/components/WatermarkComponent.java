@@ -19,7 +19,7 @@ public class WatermarkComponent extends HudComponentItem
     private SalRainbowUtil Rainbow = new SalRainbowUtil(9);
     private int l_I = 0;
 
-    private static String WatermarkString = l_Hud.Rainbow.getValue() ? String.format("%s %s", SalHackMod.NAME, SalHackMod.VERSION) : SalHackMod.NAME + ChatFormatting.WHITE + " " + SalHackMod.VERSION;
+    private static String WatermarkString = l_Hud.Rainbow.getValue() ?  SalHackMod.NAME + " " + SalHackMod.VERSION : SalHackMod.NAME + ChatFormatting.WHITE + " " + SalHackMod.VERSION;
 
     public WatermarkComponent()
     {
@@ -36,7 +36,7 @@ public class WatermarkComponent extends HudComponentItem
         {
             final String l_Text = "Reliant (rel-1.12.2-Forge)";
             
-            Wrapper.GetMC().fontRenderer.drawStringWithShadow(l_Text, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : 0xFFFFFF);
+            Wrapper.GetMC().fontRenderer.drawStringWithShadow(l_Text, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : 0xFFFFFF);
             
             SetWidth(Wrapper.GetMC().fontRenderer.getStringWidth(l_Text));
             SetHeight(Wrapper.GetMC().fontRenderer.FONT_HEIGHT);
@@ -44,7 +44,7 @@ public class WatermarkComponent extends HudComponentItem
         else
         {
             Rainbow.OnRender();
-            RenderUtil.drawStringWithShadow(WatermarkString, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : 0x2ACCED);
+            RenderUtil.drawStringWithShadow(WatermarkString, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : 0x2ACCED);
             
             SetWidth(RenderUtil.getStringWidth(WatermarkString));
             SetHeight(RenderUtil.getStringHeight(WatermarkString));

@@ -120,7 +120,7 @@ public class ArmorComponent extends HudComponentItem
                     mc.getRenderItem().renderItemOverlays(mc.fontRenderer, l_Stack, (int)(GetX() + l_X), (int)GetY()+10);
 
                     Rainbow.OnRender();
-                    FontManager.Get().TWCenMt18. drawCenteredString(Formatter.format(GetPctFromStack(l_Stack)), GetX() + l_TextX, GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+                    FontManager.Get().TWCenMt18. drawCenteredString(Formatter.format(GetPctFromStack(l_Stack)), GetX() + l_TextX, GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
                     
                     l_X += 20;
                     

@@ -33,7 +33,7 @@ public class StopwatchComponent extends HudComponentItem
         final String l_Seconds = l_Hud.Rainbow.getValue() ? "Seconds " + TimeUnit.MILLISECONDS.toSeconds(Stopwatch.ElapsedMS - Stopwatch.StartMS) : ChatFormatting.GRAY + "Seconds " + ChatFormatting.WHITE + TimeUnit.MILLISECONDS.toSeconds(Stopwatch.ElapsedMS - Stopwatch.StartMS);
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(l_Seconds, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(l_Seconds, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
 
         SetWidth(RenderUtil.getStringWidth(l_Seconds));
         SetHeight(RenderUtil.getStringHeight(l_Seconds));

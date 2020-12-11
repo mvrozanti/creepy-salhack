@@ -27,7 +27,7 @@ public class FPSComponent extends HudComponentItem
         final String l_FPS = l_Hud.Rainbow.getValue() ? String.format("FPS %s", Minecraft.getDebugFPS()) : String.format(ChatFormatting.GRAY + "FPS %s%s", ChatFormatting.WHITE, Minecraft.getDebugFPS());
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(l_FPS, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(l_FPS, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
         
         SetWidth(RenderUtil.getStringWidth(l_FPS));
         SetHeight(RenderUtil.getStringHeight(l_FPS) + 1);

@@ -55,6 +55,6 @@ public class WelcomeComponent extends HudComponentItem
         SetHeight(RenderUtil.getStringHeight(l_welcome) + 1);
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(l_welcome, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : 0x2ACCED);
+        RenderUtil.drawStringWithShadow(l_welcome, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : 0x2ACCED);
     }
 }

@@ -45,7 +45,7 @@ public class YawComponent extends HudComponentItem
         SetHeight(RenderUtil.getStringHeight(direction));
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(direction, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(direction, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
     }
 
 }

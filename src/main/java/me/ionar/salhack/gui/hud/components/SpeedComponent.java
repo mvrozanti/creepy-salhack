@@ -79,6 +79,6 @@ public class SpeedComponent extends HudComponentItem
         SetHeight(RenderUtil.getStringHeight(speed)+1);
 
         Rainbow.OnRender();
-        RenderUtil.drawStringWithShadow(speed, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber(l_I)) : -1);
+        RenderUtil.drawStringWithShadow(speed, GetX(), GetY(), l_Hud.Rainbow.getValue() ? Rainbow.GetRainbowColorAt(Rainbow.getRainbowColorNumber()) : -1);
     }
 }
