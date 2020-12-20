@@ -1,10 +1,7 @@
 [![Sal Hack logo](/src/main/resources/assets/salhack/imgs/SalHackWatermark.png)](https://discord.gg/mj9sVWf)
 
-[![Discord](https://img.shields.io/discord/694337597371056198?label=discord&logo=discord&logoColor=white)](https://discord.gg/mj9sVWf) 
-[![Gradle Build](https://github.com/ionar2/salhack/workflows/Gradle%20Build/badge.svg?branch=master)](https://github.com/ionar2/salhack/actions)
-[![GitHub All Releases](https://img.shields.io/github/downloads/ionar2/salhack/total.svg)](https://github.com/ionar2/salhack/releases/)
-[![GitHub contributors](https://img.shields.io/github/contributors/ionar2/salhack.svg)](https://github.com/ionar2/salhack/graphs/contributors/)
-[![Contributions](https://img.shields.io/badge/contributions-unmaintained-lightgray.svg?style=flat)](https://github.com/ionar2/salhack/issues/)
+[![Gradle Build](https://github.com/CreepyOrb924/creepy-salhack/workflows/Gradle%20Build/badge.svg?branch=master)](https://github.com/ionar2/salhack/actions)
+[![GitHub All Releases](https://img.shields.io/github/downloads/CreepyOrb924/creepy-salhack/total.svg)](https://github.com/CreepyOrb924/creepy-salhack/releases)
 
 ## Salhack
 Salhack is a Forge mod made by ionar. Recently, ionar has made the decision to leave the project, and as such, this project is discontinued without a main developer. 
