@@ -61,7 +61,6 @@ public class ModuleManager
         Add(new KillAuraModule());
         Add(new MiddleClickPearlModule());
         Add(new OldAutoCrystalRewrite());
-        Add(new ReachModule());
         Add(new SelfTrapModule());
         Add(new SurroundModule());
         Add(new VelocityModule());
@@ -78,7 +77,6 @@ public class ModuleManager
         Add(new PacketCancellerModule());
         Add(new PacketFlyModule());
         Add(new PortalGodModeModule());
-        Add(new SwingModule());
 
         /// Misc
         Add(new AntiAFKModule());
@@ -101,7 +99,6 @@ public class ModuleManager
         Add(new HotbarCacheModule());
         Add(new ManualDupeModule());
         Add(new MiddleClickFriendsModule());
-        Add(new RetardChatModule());
         Add(new StopWatchModule());
         Add(new TotemPopNotifierModule());
         Add(new VisualRangeModule());

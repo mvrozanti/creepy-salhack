@@ -59,6 +59,8 @@ public class ImageManager
         LoadImage("SalHackWatermark");
         LoadImage("Shield");
         LoadImage("skull");
+        LoadImage("particles");
+        LoadImage("Title");
     }
     
     public void LoadImage(String p_Img)

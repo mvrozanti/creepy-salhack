@@ -42,6 +42,7 @@ public class MixinGuiNewChat
             info.cancel();
             
             int maxLines = mod.ChatLength.getValue() == -1 ? 0xFFFFFF : mod.ChatLength.getValue();
+            if(!mod.isEnabled()) maxLines = 100;
             GuiNewChat guiNewChat = (GuiNewChat) (Object) this;
 
             if (chatLineId != 0)

@@ -15,7 +15,7 @@ import org.lwjgl.opengl.Display;
 public final class SalHackMod
 {
     public static final String NAME = "Creepy SalHack";
-    public static final String VERSION = "2.8";
+    public static final String VERSION = "2.8.1";
 
     public static final Logger log = LogManager.getLogger("sal");
 
