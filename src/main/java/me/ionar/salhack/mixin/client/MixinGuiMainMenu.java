@@ -53,7 +53,7 @@ public class MixinGuiMainMenu extends GuiScreen {
 
         //get updates from UpdateManager
         GuiButton updateButton = new GuiButton(69, this.width / 2 - 100, this.height / 4 + 24, "Update Available");
-        if(!updateManager.getVersion().equals("") && (Double.parseDouble(updateManager.getVersion().substring(2)) > Double.parseDouble(SalHackMod.VERSION.substring(2)) || Double.parseDouble(updateManager.getVersion().substring(0, 4)) > Double.parseDouble(SalHackMod.VERSION.substring(0, 4)))) {
+        if(!updateManager.getVersion().equals("") && Double.parseDouble(updateManager.getVersion().substring(2)) > Double.parseDouble(SalHackMod.VERSION.substring(2))) {
             this.buttonList.add(updateButton);
         }
     }
