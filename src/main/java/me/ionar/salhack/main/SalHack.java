@@ -22,7 +22,6 @@ public class SalHack
     private static AlwaysEnabledModule m_AlwaysEnabledMod;
     private static PresetsManager m_PresetsManager = new PresetsManager();
     private static UUIDManager m_UUIDManager = new UUIDManager();
-    private static UpdateManager m_Updatemanager = new UpdateManager();
 
     public static void Init()
     {
@@ -120,9 +119,5 @@ public class SalHack
     public static UUIDManager GetUUIDManager()
     {
         return m_UUIDManager;
-    }
-
-    public static UpdateManager GetUpdateManager() {
-        return m_Updatemanager;
     }
 }

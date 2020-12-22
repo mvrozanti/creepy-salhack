@@ -2,7 +2,6 @@ package me.ionar.salhack.mixin.client;
 
 import me.ionar.salhack.SalHackMod;
 import me.ionar.salhack.managers.ImageManager;
-import me.ionar.salhack.managers.UpdateManager;
 import me.ionar.salhack.util.imgs.SalDynamicTexture;
 import me.ionar.salhack.util.render.ParticleRenderer;
 import net.minecraft.client.gui.FontRenderer;
@@ -37,9 +36,6 @@ public class MixinGuiMainMenu extends GuiScreen {
     //Setup particle renderer
     private final ParticleRenderer particleRenderer = new ParticleRenderer(width, height);
 
-    //Call update manager
-    private final UpdateManager updateManager = UpdateManager.Get();
-
     //Load title texture
     private SalDynamicTexture TITLE;
 
@@ -50,12 +46,6 @@ public class MixinGuiMainMenu extends GuiScreen {
     public void setup(CallbackInfo ci) {
         TITLE = ImageManager.Get().GetDynamicTexture("Title");
         particleRenderer.updateSize(width, height);
-
-        //get updates from UpdateManager
-        GuiButton updateButton = new GuiButton(69, this.width / 2 - 100, this.height / 4 + 24, "Update Available");
-        if(!updateManager.getVersion().equals("") && Double.parseDouble(updateManager.getVersion().substring(2)) > Double.parseDouble(SalHackMod.VERSION.substring(2))) {
-            this.buttonList.add(updateButton);
-        }
     }
 
     @Inject(method = "actionPerformed", at = @At("HEAD"))
